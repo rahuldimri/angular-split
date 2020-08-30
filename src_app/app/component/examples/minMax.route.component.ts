@@ -76,9 +76,67 @@ import { AComponent } from './AComponent'
       }
     `,
   ],
-  template: ` {{ testChangeDetectorRun() }}
+  template: `
+    {{ testChangeDetectorRun() }}
     <div class="container">
       <sp-example-title [type]="exampleEnum.MINMAX"></sp-example-title>
+      <h5>Multiple splits</h5>
+      <div style="height: 500px;">
+        <as-split direction="horizontal" unit="pixel">
+          <as-split-area [size]="200" [minSize]="100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tiam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </as-split-area>
+          <as-split-area [size]="200" [minSize]="100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tiam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </as-split-area>
+          <as-split-area [size]="200" [minSize]="100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tiam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </as-split-area>
+          <as-split-area [size]="200" [minSize]="100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tiam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </as-split-area>
+          <as-split-area [size]="200" [minSize]="100">
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eodolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+              nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+              autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </p>
+          </as-split-area>
+          <as-split-area [size]="200" [minSize]="100">
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+              consequuntur magni dolores eodolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+              nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+              autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </p>
+          </as-split-area>
+        </as-split>
+      </div>
       <h5>Percent mode:</h5>
       <div class="split-example ex-percent">
         <as-split unit="percent" [restrictMove]="restrictMove" gutterSize="30" (dragEnd)="log($event)">
@@ -131,7 +189,8 @@ import { AComponent } from './AComponent'
           {{ 'Restrict move: "' + restrictMove + '"' }}
         </button>
       </div>
-    </div>`,
+    </div>
+  `,
 })
 export class MinMaxComponent extends AComponent {
   restrictMove: boolean = false
