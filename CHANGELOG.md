@@ -1,3 +1,9 @@
+<a name="5.1.0-beta.0"></a>
+
+# 5.1.0-beta.0 (2021-05-03)
+
+- **Fix** Add a delta to mouse click/double click to make sure double click gets recognized [#300](https://github.com/angular-split/angular-split/issues/300) thanks to [ethankay](https://github.com/ethankay)!
+
 <a name="5.0.0"></a>
 
 # 5.0.0 (2020-12-18)
